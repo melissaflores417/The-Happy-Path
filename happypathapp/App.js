@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
 import HomeScreen from './Screens/Home';
-import DailyReflectionScreen from './Screens/DailyReflection';
+import DailyReflectionScreen from './Screens/Tips';
 import ExploreScreen from './Screens/Explore';
-import TipsScreen from './Screens/Tips';
+import TipsScreen from './Screens/DailyReflection';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
@@ -19,7 +19,6 @@ export default function App() {
   return (
  
     <NavigationContainer>
-      
     <Tab.Navigator labeled={false} barStyle={{ backgroundColor: '#252525' }} activeColor="white" >
       <Tab.Screen name="Home" component={HomeScreen}            //Home Screen
       options={{
