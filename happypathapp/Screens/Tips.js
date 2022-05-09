@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
 
 
-function DailyReflection() {
+function Tips() {
     return (
         <View style={{alignItems:'center', justifyContent:'center', flex:1, marginBottom: 473, backgroundColor: '#E0D3E8'}}>
              <Image source={require('../Screens/happypath.png')} style={styles.logo}/>
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default DailyReflection
+export default Tips
