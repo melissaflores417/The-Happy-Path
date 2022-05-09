@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text, Image, StyleSheet, Section, SectionContent, Picker} from 'react-native'
 
 function DailyReflection() {
-  
+    const [selectedValue, setSelectedValue] = useState("java");
     return (
         <View style={{alignItems:'center', justifyContent:'center', flex:1, marginBottom: 527, backgroundColor: '#fffbe4'}}>
              <Image source={require('../Screens/happypath.png')} style={styles.logo}/>
@@ -11,12 +11,16 @@ function DailyReflection() {
             <SectionContent>
                 
                     <Text style={{ marginBottom: 10 }}>Picker</Text>
-                    <Picker
-                        items={items}
-                        value={pickerValue}
-                        placeholder="Choose your role"
-                        onValueChange={(val) => setPickerValue(val)}
-                    />
+                    <Picker>
+                        selectedValue={selectedValue}
+                        style={{ height: 50, width: 150 }}
+                        onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+                        <Text style = {{ textAlign: 'center', fontSize:'16', fontWeight: 'regular', color:'#252525', fontFamily: 'Avenir', marginTop: 10}}>What's your favorite color?</Text>
+                        <Picker.Item label="Blue" value="blue" />
+                        <Picker.Item label="Red" value="red" />
+                        <Picker.Item label="Green" value="green" />
+                        <Picker.Item label="Purple" value="purple" />
+                    </Picker>
                
             </SectionContent>
         </Section>
