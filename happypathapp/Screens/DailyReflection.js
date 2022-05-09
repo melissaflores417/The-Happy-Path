@@ -6,7 +6,7 @@ function DailyReflection() {
     return (
         <View style={{alignItems:'center', justifyContent:'center', flex:1, marginBottom: 527, backgroundColor: '#fffbe4'}}>
              <Image source={require('../Screens/happypath.png')} style={styles.logo}/>
-        <Text style = {{fontSize:'20', fontWeight: 'bold', color:'#2c29b2', fontFamily: 'Avenir'}}>Daily Reflection</Text>
+        <Text style = {{fontSize:'20', fontWeight: 'bold', color:'#2c29b2', fontFamily:'Avenir'}}>Daily Reflection</Text>
         <Section style={{ marginHorizontal: 20, marginTop: 20 }}>
             <SectionContent>
                 
