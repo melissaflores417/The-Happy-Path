@@ -1,15 +1,20 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
+
 import { Section, SectionContent} from 'react-native-rapi-ui';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Feather';
 
 
 
+
+
 function Home() {
     return (
+        /* Logo */
         <View style={{alignItems:'center', justifyContent:'center', flex:1, marginBottom: 500}}>
              <Image source={require('../Screens/happypath.png')} style={styles.logo}/>
+
             <Text style = {{fontSize:'20', fontWeight: 'bold', color:'#2c29b2', fontFamily: 'Avenir', marginTop: 30}}>Welcome Home!</Text>
             <Text style = {{fontSize:'20', fontWeight: 'bold', color:'#2c29b2', fontFamily: 'Avenir', marginBottom: 10}}>This is your safe space.</Text>
             <Text style ={{marginTop: 10, fontWeight: 'bold', fontFamily: 'Avenir'}}>How did you feel waking up today?</Text>
@@ -64,12 +69,12 @@ function Home() {
             <SectionContent style={styles.categories}>
                 <Text>Manage Stress</Text>
             </SectionContent>
-          
-
         </View>
         </View>
     )
 }
+
+/* Styling */
 const styles = StyleSheet.create({
     logo: {
       width: 50,
@@ -97,7 +102,5 @@ const styles = StyleSheet.create({
       marginRight: 10
     }
   });
-
-
 
 export default Home

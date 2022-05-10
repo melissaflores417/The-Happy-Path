@@ -17,28 +17,32 @@ const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
   return (
-  
     
+    /* Navigation Menu */
     <NavigationContainer>
     <Tab.Navigator labeled={false} barStyle={{ backgroundColor: '#252525' }} activeColor="white" >
+      {/* Home */}
       <Tab.Screen name="Home" component={HomeScreen}           
       options={{
         tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="home-variant-outline" color={color} size={26}/>
         ),
     }}/>
+      {/* Tips */}
       <Tab.Screen name="Tips" component={TipsScreen}        
       options={{
         tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="book-open-outline" color={color} size={26}/>
         ),
     }}/>
+      {/* DailyReflection */}
       <Tab.Screen name="DailyReflection" component={DailyReflectionScreen}    
       options={{
         tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="pencil-box-outline" color={color} size={26}/>
         ),
     }}/>
+      {/* Encourage */}
       <Tab.Screen name="Encourage" component={EncourageScreen}          
       options={{
         tabBarIcon: ({ color, size }) => (
