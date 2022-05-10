@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/Feather';
 function Home() {
     return (
         /* Logo */
-        <View style={{alignItems:'center', justifyContent:'center', flex:1, marginBottom: 500}}>
+        <View style={{alignItems:'center', justifyContent:'center', flex:1, marginBottom: 350}}>
              <Image source={require('../Screens/happypath.png')} style={styles.logo}/>
 
             <Text style = {{fontSize:'20', fontWeight: 'bold', color:'#2c29b2', fontFamily: 'Avenir', marginTop: 30}}>Welcome Home!</Text>
@@ -61,16 +61,29 @@ function Home() {
             <Text style={styles.reminder}>Reminder! {'\n'} Today is a new day. Be mindful of {'\n'} how you spend your time.</Text>
             <Text style ={{marginTop: 10, fontWeight: 'bold', fontFamily: 'Avenir'}}>What would you like to focus on today?</Text>
 
-            <View style={{ flexDirection: "row", justifyContent: 'space-between', marginTop: 10 }}>
-   
-            <SectionContent style={styles.categories}>
-                <Text>Manage Anxiety</Text>
-            </SectionContent>
-            <SectionContent style={styles.categories}>
-                <Text>Manage Stress</Text>
-            </SectionContent>
+            <View style={{ flexDirection: "row", justifyContent: 'center',}}>
+        <Section style={styles.categories}>
+            <Text style = {{fontSize:'16', fontWeight: 'bold', color:'#2c29b2',
+                            fontFamily: 'Avenir', textAlign: 'center', paddingTop: 10}}>Manage {'\n'} Anxiety</Text>
+        </Section>
+        <Section style={styles.categories}>
+            <Text style = {{fontSize:'16', fontWeight: 'bold', color:'#2c29b2',
+                            fontFamily: 'Avenir', textAlign: 'center', paddingTop: 10}}>Positive {'\n'}Self-Talk</Text>
+        </Section>
+        </View>
+
+        <View style={{ flexDirection: "row", justifyContent: 'center' }}>
+        <Section style={styles.categories}>
+            <Text style = {{fontSize:'16', fontWeight: 'bold', color:'#2c29b2',
+                            fontFamily: 'Avenir', textAlign: 'center', paddingTop: 10}}>Learn more {'\n'} about {'\n'}mental health</Text>
+        </Section>
+        <Section style={styles.categories}>
+            <Text style = {{fontSize:'16', fontWeight: 'bold', color:'#2c29b2',
+                            fontFamily: 'Avenir', textAlign: 'center', paddingTop: 10}}>Manage{'\n'}Stress</Text>
+        </Section>
         </View>
         </View>
+       
     )
 }
 
@@ -92,14 +105,17 @@ const styles = StyleSheet.create({
       marginBottom: 10
     },
     categories: {
-      backgroundColor: '#DFECFF',
+      backgroundColor:'#DFECFF',
+      height: 100,
+      width: 130,
       marginTop: 10,
+      marginBottom: 10,
+      marginLeft: 10,
       fontFamily: 'Avenir',
       fontSize: 14,
-      padding: 20,
-      fontWeight: 'bold', 
-      marginLeft: 10,
-      marginRight: 10
+      fontWeight: 'bold',
+      paddingLeft: 5,
+      paddingTop: 15
     }
   });
 
