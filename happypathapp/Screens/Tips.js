@@ -3,7 +3,6 @@ import { View, Text, Image, StyleSheet } from 'react-native'
 
 
 function Tips() {
-
     return (
         <View style={{alignItems:'center', justifyContent:'center', flex:1, marginBottom: 473, backgroundColor: '#E0D3E8'}}>
              <Image source={require('../Screens/happypath.png')} style={styles.logo}/>
