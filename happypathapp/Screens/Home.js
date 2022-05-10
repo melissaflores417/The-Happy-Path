@@ -1,7 +1,8 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
-import { Section, SectionContent, Button } from 'react-native-rapi-ui';
-
+import { Section, SectionContent} from 'react-native-rapi-ui';
+import { Button } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/Feather';
 
 
 
@@ -13,10 +14,44 @@ function Home() {
             <Text style = {{fontSize:'20', fontWeight: 'bold', color:'#2c29b2', fontFamily: 'Avenir', marginBottom: 10}}>This is your safe space.</Text>
             <Text style ={{marginTop: 10, fontWeight: 'bold', fontFamily: 'Avenir'}}>How did you feel waking up today?</Text>
       <View style={{ flexDirection: "row", justifyContent: 'space-around', marginTop: 10, marginBottom: 10}}>
-      <Button text="Sad"/>
-      <Button text="Happy"  />
-      <Button text="Okay" />
-      <Button text="Mad" />
+     
+    <Button
+      color="green"
+      icon={
+        <Icon
+          name="smile"
+          size={15}
+          color="white"
+          
+        />
+      }
+    />
+    <Button
+      color="green"
+      icon={
+        <Icon
+          name="meh"
+          size={15}
+          color="white"
+          
+        />
+      }
+      
+    />
+    <Button
+      color="green"
+      icon={
+        <Icon
+          name="frown"
+          size={15}
+          color="white"
+          
+        />
+      }
+      
+    />
+
+
       </View>
             <Text style={styles.reminder}>Reminder! {'\n'} Today is a new day. Be mindful of {'\n'} how you spend your time.</Text>
             <Text style ={{marginTop: 10, fontWeight: 'bold', fontFamily: 'Avenir'}}>What would you like to focus on today?</Text>
