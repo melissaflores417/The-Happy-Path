@@ -2,16 +2,19 @@ import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
 import { Section } from 'react-native-rapi-ui';
 
-
 function Encourage() {
 
     return (
+        /* Logo */
         <View style={{alignItems:'center', justifyContent:'center', flex:1, marginBottom: 0, backgroundColor: '#E0D3E8'}}>
              <Image source={require('../Screens/happypath.png')} style={styles.logo}/>
+             
+        {/* Title */}
         <Text style = {{fontSize:'20', fontWeight: 'bold', color:'#2c29b2', fontFamily: 'Avenir'}}>Encouraging Notes</Text>
         <Text style = {{textAlign: 'center', fontSize:'16', fontWeight: 'regular', color:'#252525', fontFamily: 'Avenir', marginTop: 10}}>View some encouraging words {'\n'} to lift you up or create your own!</Text>
         <Text style = {{textAlign: 'left', fontSize:'16', fontWeight: 'bold', color:'#252525', fontFamily: 'Avenir', marginTop: 40}}>Select categories</Text>
         
+        {/* Content */}
         <View style={{ flexDirection: "row", justifyContent: 'center' }}>
         <Section style={styles.categories}>
             <Text style = {{fontSize:'16', fontWeight: 'bold', color:'#2d2d2d',
@@ -47,6 +50,8 @@ function Encourage() {
         </View>
     )
 }
+
+/* Styling */
 const styles = StyleSheet.create({
     logo: {
       width: 50,
@@ -69,6 +74,5 @@ const styles = StyleSheet.create({
       paddingTop: 15
     }
   });
-
 
 export default Encourage
